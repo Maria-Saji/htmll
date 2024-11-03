@@ -1,17 +1,19 @@
-body {
+/* Reset and Basic Styling */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-.container {
-  display: flex;  /* Flexbox layout */
-  justify-content: space-around;  /* Even space between images */
-  align-items: center;
-  margin: 50px;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Navbar styling */
+body {
+    background: linear-gradient(135deg, #f4f4f4, #ff0066); /* Main background gradient */
+    color: black;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Navbar Styling */
 .navbar {
     display: flex;
     flex-direction: column;
@@ -22,10 +24,18 @@ body {
 
 .navbar img {
     width: 100px;
-    height: 150px;;
+    height: 150px;
 }
 
-/* Hero section */
+/* Container for Flex Layout */
+.container {
+    display: flex;  
+    justify-content: space-around;  
+    align-items: center;
+    margin: 50px;
+}
+
+/* Hero Section */
 .hero {
     display: flex;
     justify-content: center;
@@ -34,18 +44,13 @@ body {
     background-color: #f4f4f4;
 }
 
-.hero .column h1 {
-    font-family: Arial;
-    font-size: 18px;
-}
-
 .hero .column {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0 30px;
-    background-color:white;
+    background-color: white;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -66,16 +71,20 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.hero .column h1 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
 .hero .column a {
+    display: block;
     margin: 15px;
     padding: 12px 24px;
-    border: none;
     background-color: #007BFF;
-    color:black;
-    cursor: pointer;
+    color: white;
     border-radius: 4px;
     font-size: 18px;
-    text-decoration: salmon;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
@@ -83,92 +92,40 @@ body {
     background-color: #0056b3;
 }
 
-
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
     }
 
     .hero .column {
-        margin: 20px 0;
         width: 100%;
         max-width: 400px;
+        margin: 20px 0;
     }
-
 }
-/* Reset and Styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Body background setup */
-  body {
-    height: 100vh;
-    background: linear-gradient(135deg, #f4f4f4, #ff0066);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  /* Reset and Styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Body background setup */
-  body {
-    height: 100vh;
-    background: linear-gradient(135deg, #f4f4f4, #ff0066);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
- /* Reset and Styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Body background setup */
-  body {
-    height: 100vh;
-    background-color: pink; /* Pink background */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Welcome container styling */
-  .welcome-container {
+
+/* Welcome Container and Intro Button Styling */
+.welcome-container {
     text-align: center;
     animation: fadeIn 1.5s ease-in-out;
     position: relative;
-  }
-  
-  /* Doll image styling */
-  .doll-image {
+    background-color: pink;
+}
+
+.doll-image {
     width: 150px;
     height: auto;
     margin-bottom: 1rem;
-  }
-  
-  /* Welcome text styling */
-  .welcome-text {
+}
+
+.welcome-text {
     font-size: 3rem;
-    color: black; /* White text */
+    color: black;
     margin-bottom: 1.5rem;
-  }
-  
-  /* Pop button styling */
-  .pop-button {
+}
+
+.pop-button {
     background-color: #ff4757;
     border: none;
     color: white;
@@ -182,48 +139,40 @@ body {
     outline: none;
     transition: transform 0.2s ease-in-out;
     overflow: hidden;
-  }
-  
-  .pop-button:hover {
+}
+
+.pop-button:hover {
     transform: scale(1.1);
-  }
-  
-  /* Arrow animation */
-  .arrow {
+}
+
+.arrow {
     transition: transform 0.3s ease-in-out;
-  }
-  
-  .pop-button:hover .arrow {
+}
+
+.pop-button:hover .arrow {
     transform: translateX(8px);
-  }
-  
-  /* Fade-in animation */
-  @keyframes fadeIn {
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
     0% {
-      opacity: 0;
-      transform: translateY(-20px);
+        opacity: 0;
+        transform: translateY(-20px);
     }
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  body {
-    background-color: #1c1c1c;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 50px;
-    color: black;
-  }
-  h1 {
-    margin-bottom: 40px;
-  }
-  .button-container {
+}
+
+/* Download Button Styling */
+.button-container {
     display: flex;
     justify-content: center;
     gap: 20px;
-  }
-  .download-button {
+}
+
+.download-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -237,17 +186,19 @@ body {
     font-weight: bold;
     transition: background-color 0.3s, transform 0.1s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  .download-button:hover {
+}
+
+.download-button:hover {
     background-color: #45a049;
     transform: scale(1.05);
-  }
-  .download-button:active {
+}
+
+.download-button:active {
     transform: scale(0.98);
-  }
-  .icon {
+}
+
+.icon {
     margin-right: 10px;
     font-size: 20px;
-  }
-  
-  
+}
+
